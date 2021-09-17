@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="name-and-tagline">
+            <h1>MIXER</h1>
+            <h4><span></span>Your events, made easy</h4>
+        </div>
+        <div class="form-area">
+            <form id="form">
+                <div class="line"></div>
+                <div class="header-2">
+                    <h2>RSVP</h2>
+                </div>
+                <div class="input-fields" id="name-input">
+                    <input id="name" type="text" required autocomplete="off">
+                    <label for="name" class="label-name"><span class="label-name-content">Name</span></label>
+                </div>
+                <div class="input-fields" id="phone-number-input">
+                    <input id="phone-number" type="tel" required autocomplete="off" pattern="(\+\d{1,4}[- ]?)?\d{11}$">
+                    <label for="phone-number" class="label-name"><span class="label-name-content">Mobile Number</span></label>
+                </div>
+                <div class="input-fields" id="auth-code-input">
+                    <input id="auth-code" type="tel" required autocomplete="off" minlength="6" maxlength="6">
+                    <label for="auth-code" class="label-name"><span class="label-name-content">Event Pin</span></label>
+                </div>
+                <div id="RSVP-status-input">
+                    <div class="radio-buttons" id="radio-going">
+                            <input type="radio" id="going" name="RSVP-option" value="go-er" required>
+                            <label for="going">Going</label>
+                    </div>
+                    <div class="radio-buttons" id="radio-maybe">
+                        <input type="radio" id="maybe" name="RSVP-option" value="maybe-er">
+                        <label for="maybe">Maybe</label>
+                    </div>
+                    <div class="radio-buttons" id="radio-cant-go">
+                        <input type="radio" id="cant-go" name="RSVP-option" value="no-er">
+                        <label for="cant-go">Can't Go</label>
+                    </div>
+                </div>
+                <div class="submit-button-area">
+                    <input id="submit-button" type="submit" value="Submit">
+                    <label for="submit-button">Submit</label>
+                </div>
+            </form>
+            <div class="thank-you-message">
+                <p id="alert">Thank you for responding to the invitation.<br><br>To keep in the loop with this event or create one of your own, click <a href="https://testflight.apple.com/join/fK5szHcT">here</a> to download our App </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>mixer.events@yahoo.com</p>
+        <p>A copy of our privacy policy is available on request</p>
+    </footer>
+</body>
+</html>
